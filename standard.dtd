@@ -1,3 +1,4 @@
+<!ENTITY saarors-tag "[with saarors-tag]">
 <!ELEMENT document (header, body, footer, sidebar?, section+, article+, form?, widget+, script+, automation?, apiCall?, graph?, list?, table?, imageGallery?, comments?, map?, datalist?, articleGroup?, videoGallery?, search?, voiceCommand?, footer?)>
 <!ELEMENT header (title, meta+, link+, nav?, logo?, hgroup?)>
 <!ELEMENT title (#PCDATA)>
