@@ -1,0 +1,256 @@
+<!ELEMENT document (header, body, footer, sidebar?, section+, article+, form?, widget+, script+, automation?, apiCall?, graph?, list?, table?, imageGallery?, comments?, map?, datalist?, articleGroup?, videoGallery?, search?, voiceCommand?, footer?)>
+<!ELEMENT header (title, meta+, link+, nav?, logo?, hgroup?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT meta EMPTY>
+<!ATTLIST meta 
+    name CDATA #REQUIRED 
+    content CDATA #REQUIRED
+    charset CDATA #IMPLIED
+    http-equiv CDATA #IMPLIED>
+
+<!ELEMENT link EMPTY>
+<!ATTLIST link
+    href CDATA #REQUIRED
+    rel CDATA #REQUIRED
+    type CDATA #IMPLIED
+    sizes CDATA #IMPLIED
+    media CDATA #IMPLIED>
+
+<!ELEMENT nav (link+)>
+<!ELEMENT logo (image)>
+<!ELEMENT hgroup (h1, h2?)>
+
+<!ELEMENT body (header?, section+, article+, sidebar?, footer, widget+, script+, table?, chart?, graph?, apiCall?, comments?, map?, datalist?, articleGroup?, videoGallery?, search?, voiceCommand?)>
+<!ELEMENT section (header?, paragraph+, image?, video?, iframe?, list?, table?, chart?, widget?, automation?, map?, datalist?)>
+<!ELEMENT article (header, paragraph+, image?, video?, figure?, quote?, comments?, list?, widget?, articleGroup?)>
+<!ELEMENT header (h1, h2, h3, p?)>
+<!ELEMENT paragraph (#PCDATA)>
+<!ELEMENT figure (image, caption)>
+<!ELEMENT caption (#PCDATA)>
+<!ELEMENT image EMPTY>
+<!ATTLIST image
+    src CDATA #REQUIRED
+    alt CDATA #REQUIRED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED>
+
+<!ELEMENT video (source+)>
+<!ELEMENT source EMPTY>
+<!ATTLIST source
+    src CDATA #REQUIRED
+    type CDATA #REQUIRED>
+
+<!ELEMENT iframe EMPTY>
+<!ATTLIST iframe
+    src CDATA #REQUIRED
+    width CDATA "100%"
+    height CDATA "600">
+
+<!ELEMENT quote (p)>
+<!ELEMENT p (#PCDATA)>
+
+<!ELEMENT comments (comment+)>
+<!ELEMENT comment (author, timestamp, content, rating?, likes?, share?)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT timestamp (#PCDATA)>
+<!ELEMENT content (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT likes (#PCDATA)>
+<!ELEMENT share (link+)>
+
+<!ELEMENT form (input+, textarea+, button, checkbox+, select?, datalist?)>
+<!ELEMENT input EMPTY>
+<!ATTLIST input
+    type (text | password | email | date | checkbox | radio | number | range | tel | url) "text"
+    name CDATA #REQUIRED
+    value CDATA #IMPLIED
+    placeholder CDATA #IMPLIED
+    required (true | false) "false"
+    disabled (true | false) "false"
+    readonly (true | false) "false">
+    
+<!ELEMENT textarea (#PCDATA)>
+<!ATTLIST textarea
+    name CDATA #REQUIRED
+    rows CDATA "4"
+    cols CDATA "50">
+
+<!ELEMENT button (#PCDATA)>
+<!ATTLIST button
+    type (submit | reset | button) "button"
+    disabled (true | false) "false">
+
+<!ELEMENT checkbox EMPTY>
+<!ATTLIST checkbox
+    name CDATA #REQUIRED
+    checked (true | false) "false">
+
+<!ELEMENT select (option+)>
+<!ELEMENT option (#PCDATA)>
+<!ATTLIST option
+    value CDATA #REQUIRED
+    selected (true | false) "false">
+
+<!ELEMENT footer (p+, address?, socialLinks?, copyright?, sitemap?, calendar?)>
+<!ELEMENT socialLinks (link+)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT sitemap (link+)>
+<!ELEMENT calendar (event+)>
+<!ELEMENT event (title, date, description, location)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+
+<!ELEMENT sensor (type, data)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+
+<!ELEMENT apiCall (url, method, headers?, body?, params?)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT headers (header+)>
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT params (param+)>
+<!ELEMENT param (#PCDATA)>
+
+<!ELEMENT graph (title, axis, data)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT axis (xAxis, yAxis)>
+<!ELEMENT xAxis (label, scale)>
+<!ELEMENT yAxis (label, scale)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT scale (#PCDATA)>
+<!ELEMENT data (point+)>
+<!ELEMENT point (x, y)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+
+<!ELEMENT chart (title, data, type)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT data (point+)>
+<!ELEMENT point (x, y, z)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+<!ELEMENT z (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+
+<!ELEMENT automation (task+)>
+<!ELEMENT task (name, action, trigger, schedule?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT action (#PCDATA)>
+<!ELEMENT trigger (#PCDATA)>
+<!ELEMENT schedule (time, interval)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT interval (#PCDATA)>
+
+<!ELEMENT widget (type, data)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+
+<!ELEMENT profile (name, bio, avatar, posts, friends, achievements?, preferences?, socialLinks?, settings?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT bio (#PCDATA)>
+<!ELEMENT avatar (image)>
+<!ELEMENT posts (post+)>
+<!ELEMENT post (title, content, timestamp, likes)>
+<!ELEMENT timestamp (#PCDATA)>
+<!ELEMENT likes (#PCDATA)>
+<!ELEMENT friends (friend+)>
+<!ELEMENT friend (name, profileLink)>
+<!ELEMENT profileLink (#PCDATA)>
+<!ELEMENT achievements (achievement+)>
+<!ELEMENT achievement (title, description, date)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT preferences (setting+)>
+<!ELEMENT setting (name, value)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT socialLinks (link+)>
+<!ELEMENT settings (setting+)>
+<!ELEMENT setting (name, value)>
+
+<!ELEMENT list (item+)>
+<!ELEMENT item (title, description, link, icon?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT icon (image)>
+
+<!ELEMENT table (header, row+)>
+<!ELEMENT header (column+)>
+<!ELEMENT column (#PCDATA)>
+<!ELEMENT row (cell+)>
+<!ELEMENT cell (#PCDATA)>
+
+<!ELEMENT breadcrumb (link+)>
+
+<!ELEMENT imageGallery (image+)>
+<!ELEMENT image EMPTY>
+<!ATTLIST image
+    src CDATA #REQUIRED
+    alt CDATA #REQUIRED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED>
+
+<!ELEMENT formGroup (label, input+)>
+<!ELEMENT label (#PCDATA)>
+
+<!ELEMENT addressBook (contact+)>
+<!ELEMENT contact (name, email, phone, address?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT address (street, city, state, postalCode)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT postalCode (#PCDATA)>
+
+<!ELEMENT map (location, marker+)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT marker (latitude, longitude, title?)>
+<!ELEMENT latitude (#PCDATA)>
+<!ELEMENT longitude (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+
+<!ELEMENT datalist (option+)>
+
+<!ELEMENT articleGroup (article+)>
+
+<!ELEMENT videoGallery (video+)>
+<!ELEMENT video EMPTY>
+<!ATTLIST video
+    src CDATA #REQUIRED
+    type CDATA #REQUIRED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    autoplay (true | false) "false"
+    controls (true | false) "false">
+
+<!ELEMENT search (input, button)>
+
+<!ELEMENT article (header, section+, footer?)>
+<!ELEMENT footer (p+, address?, copyright?)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT mark (#PCDATA)>
+<!ELEMENT progress EMPTY>
+<!ATTLIST progress
+    value CDATA #IMPLIED
+    max CDATA #IMPLIED>
+
+<!ELEMENT meter EMPTY>
+<!ATTLIST meter
+    value CDATA #IMPLIED
+    min CDATA #IMPLIED
+    max CDATA #IMPLIED
+    low CDATA #IMPLIED
+    high CDATA #IMPLIED
+    optimum CDATA #IMPLIED>
+
+<!ELEMENT dialog (p+)>
+<!ELEMENT template (content+)>
