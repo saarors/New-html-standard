@@ -7,7 +7,6 @@
     content CDATA #REQUIRED
     charset CDATA #IMPLIED
     http-equiv CDATA #IMPLIED>
-
 <!ELEMENT link EMPTY>
 <!ATTLIST link
     href CDATA #REQUIRED
@@ -15,11 +14,9 @@
     type CDATA #IMPLIED
     sizes CDATA #IMPLIED
     media CDATA #IMPLIED>
-
 <!ELEMENT nav (link+)>
 <!ELEMENT logo (image)>
 <!ELEMENT hgroup (h1, h2?)>
-
 <!ELEMENT body (header?, section+, article+, sidebar?, footer, widget+, script+, table?, chart?, graph?, apiCall?, comments?, map?, datalist?, articleGroup?, videoGallery?, search?, voiceCommand?)>
 <!ELEMENT section (header?, paragraph+, image?, video?, iframe?, list?, table?, chart?, widget?, automation?, map?, datalist?)>
 <!ELEMENT article (header, paragraph+, image?, video?, figure?, quote?, comments?, list?, widget?, articleGroup?)>
@@ -33,22 +30,18 @@
     alt CDATA #REQUIRED
     width CDATA #IMPLIED
     height CDATA #IMPLIED>
-
 <!ELEMENT video (source+)>
 <!ELEMENT source EMPTY>
 <!ATTLIST source
     src CDATA #REQUIRED
     type CDATA #REQUIRED>
-
 <!ELEMENT iframe EMPTY>
 <!ATTLIST iframe
     src CDATA #REQUIRED
     width CDATA "100%"
     height CDATA "600">
-
 <!ELEMENT quote (p)>
 <!ELEMENT p (#PCDATA)>
-
 <!ELEMENT comments (comment+)>
 <!ELEMENT comment (author, timestamp, content, rating?, likes?, share?)>
 <!ELEMENT author (#PCDATA)>
@@ -57,7 +50,6 @@
 <!ELEMENT rating (#PCDATA)>
 <!ELEMENT likes (#PCDATA)>
 <!ELEMENT share (link+)>
-
 <!ELEMENT form (input+, textarea+, button, checkbox+, select?, datalist?)>
 <!ELEMENT input EMPTY>
 <!ATTLIST input
@@ -68,29 +60,24 @@
     required (true | false) "false"
     disabled (true | false) "false"
     readonly (true | false) "false">
-    
 <!ELEMENT textarea (#PCDATA)>
 <!ATTLIST textarea
     name CDATA #REQUIRED
     rows CDATA "4"
     cols CDATA "50">
-
 <!ELEMENT button (#PCDATA)>
 <!ATTLIST button
     type (submit | reset | button) "button"
     disabled (true | false) "false">
-
 <!ELEMENT checkbox EMPTY>
 <!ATTLIST checkbox
     name CDATA #REQUIRED
     checked (true | false) "false">
-
 <!ELEMENT select (option+)>
 <!ELEMENT option (#PCDATA)>
 <!ATTLIST option
     value CDATA #REQUIRED
     selected (true | false) "false">
-
 <!ELEMENT footer (p+, address?, socialLinks?, copyright?, sitemap?, calendar?)>
 <!ELEMENT socialLinks (link+)>
 <!ELEMENT address (#PCDATA)>
@@ -102,11 +89,9 @@
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT location (#PCDATA)>
-
 <!ELEMENT sensor (type, data)>
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT data (#PCDATA)>
-
 <!ELEMENT apiCall (url, method, headers?, body?, params?)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT method (#PCDATA)>
@@ -115,7 +100,6 @@
 <!ELEMENT body (#PCDATA)>
 <!ELEMENT params (param+)>
 <!ELEMENT param (#PCDATA)>
-
 <!ELEMENT graph (title, axis, data)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT axis (xAxis, yAxis)>
@@ -127,7 +111,6 @@
 <!ELEMENT point (x, y)>
 <!ELEMENT x (#PCDATA)>
 <!ELEMENT y (#PCDATA)>
-
 <!ELEMENT chart (title, data, type)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT data (point+)>
@@ -136,7 +119,6 @@
 <!ELEMENT y (#PCDATA)>
 <!ELEMENT z (#PCDATA)>
 <!ELEMENT type (#PCDATA)>
-
 <!ELEMENT automation (task+)>
 <!ELEMENT task (name, action, trigger, schedule?)>
 <!ELEMENT name (#PCDATA)>
@@ -145,11 +127,9 @@
 <!ELEMENT schedule (time, interval)>
 <!ELEMENT time (#PCDATA)>
 <!ELEMENT interval (#PCDATA)>
-
 <!ELEMENT widget (type, data)>
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT data (#PCDATA)>
-
 <!ELEMENT profile (name, bio, avatar, posts, friends, achievements?, preferences?, socialLinks?, settings?)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT bio (#PCDATA)>
@@ -173,22 +153,18 @@
 <!ELEMENT socialLinks (link+)>
 <!ELEMENT settings (setting+)>
 <!ELEMENT setting (name, value)>
-
 <!ELEMENT list (item+)>
 <!ELEMENT item (title, description, link, icon?)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT link (#PCDATA)>
 <!ELEMENT icon (image)>
-
 <!ELEMENT table (header, row+)>
 <!ELEMENT header (column+)>
 <!ELEMENT column (#PCDATA)>
 <!ELEMENT row (cell+)>
 <!ELEMENT cell (#PCDATA)>
-
 <!ELEMENT breadcrumb (link+)>
-
 <!ELEMENT imageGallery (image+)>
 <!ELEMENT image EMPTY>
 <!ATTLIST image
@@ -196,10 +172,8 @@
     alt CDATA #REQUIRED
     width CDATA #IMPLIED
     height CDATA #IMPLIED>
-
 <!ELEMENT formGroup (label, input+)>
 <!ELEMENT label (#PCDATA)>
-
 <!ELEMENT addressBook (contact+)>
 <!ELEMENT contact (name, email, phone, address?)>
 <!ELEMENT name (#PCDATA)>
@@ -210,18 +184,14 @@
 <!ELEMENT city (#PCDATA)>
 <!ELEMENT state (#PCDATA)>
 <!ELEMENT postalCode (#PCDATA)>
-
 <!ELEMENT map (location, marker+)>
 <!ELEMENT location (#PCDATA)>
 <!ELEMENT marker (latitude, longitude, title?)>
 <!ELEMENT latitude (#PCDATA)>
 <!ELEMENT longitude (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
-
 <!ELEMENT datalist (option+)>
-
 <!ELEMENT articleGroup (article+)>
-
 <!ELEMENT videoGallery (video+)>
 <!ELEMENT video EMPTY>
 <!ATTLIST video
@@ -231,9 +201,7 @@
     height CDATA #IMPLIED
     autoplay (true | false) "false"
     controls (true | false) "false">
-
 <!ELEMENT search (input, button)>
-
 <!ELEMENT article (header, section+, footer?)>
 <!ELEMENT footer (p+, address?, copyright?)>
 <!ELEMENT time (#PCDATA)>
@@ -242,7 +210,6 @@
 <!ATTLIST progress
     value CDATA #IMPLIED
     max CDATA #IMPLIED>
-
 <!ELEMENT meter EMPTY>
 <!ATTLIST meter
     value CDATA #IMPLIED
@@ -251,6 +218,58 @@
     low CDATA #IMPLIED
     high CDATA #IMPLIED
     optimum CDATA #IMPLIED>
-
 <!ELEMENT dialog (p+)>
 <!ELEMENT template (content+)>
+<!ELEMENT meta EMPTY>
+<!ATTLIST meta
+    name CDATA #REQUIRED
+    content CDATA #REQUIRED
+    charset CDATA #IMPLIED
+    http-equiv CDATA #IMPLIED>
+<!ELEMENT schema (type, property+)>
+<!ATTLIST schema 
+    type CDATA #REQUIRED>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT property (#PCDATA)>
+<!ELEMENT audio (source+)>
+<!ELEMENT source EMPTY>
+<!ATTLIST source
+    src CDATA #REQUIRED
+    type CDATA #REQUIRED>
+<!ELEMENT user (name, profileLink, avatar?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT profileLink (#PCDATA)>
+<!ELEMENT notification (title, message, timestamp)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT timestamp (#PCDATA)>
+<!ELEMENT img (src, alt, loading?)>
+<!ATTLIST img
+    src CDATA #REQUIRED
+    alt CDATA #REQUIRED
+    loading (lazy | eager) "lazy">
+<!ELEMENT customElement (shadowRoot?)>
+<!ELEMENT shadowRoot (template)>
+<!ELEMENT contextMenu (item+)>
+<!ELEMENT item (title, link)>
+<!ELEMENT beacon (url, data)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT websocket (url, message)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT iframe EMPTY>
+<!ATTLIST iframe
+    src CDATA #REQUIRED
+    width CDATA "100%"
+    height CDATA "600"
+    title CDATA #IMPLIED
+    aria-label CDATA #IMPLIED>
+<!ELEMENT cssVar (variable+)>
+<!ELEMENT variable (#PCDATA)>
+<!ELEMENT manifest (name, short_name, description, icons, start_url, display, background_color, theme_color)>
+<!ELEMENT fileUpload (input)>
+<!ATTLIST fileUpload
+    name CDATA #REQUIRED
+    accept CDATA #IMPLIED
+    multiple (true | false) "false">
