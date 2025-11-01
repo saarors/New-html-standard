@@ -273,3 +273,15 @@
     name CDATA #REQUIRED
     accept CDATA #IMPLIED
     multiple (true | false) "false">
+<!ELEMENT graph (title, axis, data, svg?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT axis (xAxis, yAxis)>
+<!ELEMENT xAxis (label, scale)>
+<!ELEMENT yAxis (label, scale)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT scale (#PCDATA)>
+<!ELEMENT data (point+)>
+<!ELEMENT point (x, y)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+<!ELEMENT svg (#PCDATA)>
