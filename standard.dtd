@@ -285,3 +285,8 @@
 <!ELEMENT x (#PCDATA)>
 <!ELEMENT y (#PCDATA)>
 <!ELEMENT svg (#PCDATA)>
+<!ELEMENT document (header, body, footer, sidebar?, section+, article+, form?, widget+, script+, automation?, apiCall?, graph?, list?, table?, imageGallery?, comments?, map?, datalist?, articleGroup?, videoGallery?, search?, voiceCommand?, footer?, survey?)>
+<!ELEMENT survey (question+)>
+<!ELEMENT question (text, option+)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT option (#PCDATA)>
